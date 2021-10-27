@@ -13,7 +13,7 @@ const ModalSearch = ({
   visible, toggleOverlay, handleSearchCity, handleSetCity, search, setSearch,
 }) => (
   <View>
-    <Overlay overlayStyle={styles.container} isVisible={visible} onBackdropPress={toggleOverlay}>
+    <Overlay overlayStyle={styles.container} isVisible={visible} onBackdropPress={() => toggleOverlay('top')}>
       <Input
         placeholder="Write any city"
         onChangeText={val => handleSearchCity(val, setSearch, true)}
@@ -29,7 +29,10 @@ const ModalSearch = ({
         <Text
           key={index}
           style={styles.results}
-          onPress={() => handleSetCity(city.name)}
+          onPress={() => {
+            handleSetCity(city.name);
+            toggleOverlay('top');
+          }}
         >
           {city.name}
         </Text>

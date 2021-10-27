@@ -17,6 +17,7 @@ import {
 import styles from './index.styles';
 import nightBg from '../../../assets/images/night.jpg';
 import ModalSearch from '../../components/modalSearch';
+import ModalMenu from '../../components/modalMenu';
 import appConfig from '../../config';
 
 function Home() {
@@ -25,9 +26,14 @@ function Home() {
   const [city, setCity] = useState(appConfig.defaultCity);
   const [backgrounds, setBackgrounds] = useState([]);
   const [search, setSearch] = useState([]);
+  const [visibleBottom, setVisibleBottom] = useState(false);
 
-  const toggleOverlay = () => {
-    setVisible(!visible);
+  const toggleOverlay = type => {
+    switch (type) {
+      case 'top': return setVisible(!visible);
+      case 'bottom': return setVisibleBottom(!visibleBottom);
+      default: return true;
+    }
   };
 
   const handleRenderBackground = () => {
@@ -90,13 +96,19 @@ function Home() {
               icon={
                 <Icon name="search" size={30} color="white" type="ionicon" />
               }
-              onPress={toggleOverlay}
+              onPress={() => toggleOverlay('top')}
             />
             <Button
               buttonStyle={styles.button}
+              onPress={() => setVisibleBottom(!visibleBottom)}
               icon={<Icon name="menu" size={30} color="white" type="ionicon" />}
             />
           </View>
+          <ModalMenu
+            visible={visibleBottom}
+            toggleOverlay={toggleOverlay}
+            city={city}
+          />
           <ModalSearch
             visible={visible}
             toggleOverlay={toggleOverlay}
