@@ -1,0 +1,48 @@
+const appConfig = {
+  apiKeyWeather: '2c219722d9004b7ab57132425212610',
+  apiKeyOpenWeather: '960e4455841ef0daf83f957d2c51b0fd',
+  apiKeyPexels: '563492ad6f91700001000001b31f6b813ec941ecbc393e6b7885f643',
+  defaultCity: {
+    location: {
+      name: 'Los Angeles',
+      region: 'California',
+      country: 'United States of America',
+      lat: 34.05,
+      lon: -118.24,
+      tz_id: 'America/Los_Angeles',
+      localtime_epoch: 1635277952,
+      localtime: '2021-10-26 12:52',
+    },
+    current: {
+      last_updated_epoch: 1635277500,
+      last_updated: '2021-10-26 12:45',
+      temp_c: 18.9,
+      temp_f: 66.0,
+      is_day: 1,
+      condition: {
+        text: 'Sunny',
+        icon: '//cdn.weatherapi.com/weather/64x64/day/113.png',
+        code: 1000,
+      },
+      wind_mph: 0.0,
+      wind_kph: 0.0,
+      wind_degree: 0,
+      wind_dir: 'N',
+      pressure_mb: 1019.0,
+      pressure_in: 30.09,
+      precip_mm: 0.0,
+      precip_in: 0.0,
+      humidity: 47,
+      cloud: 0,
+      feelslike_c: 18.9,
+      feelslike_f: 66.0,
+      vis_km: 16.0,
+      vis_miles: 9.0,
+      uv: 6.0,
+      gust_mph: 3.1,
+      gust_kph: 5.0,
+    },
+  },
+};
+
+export default appConfig;
