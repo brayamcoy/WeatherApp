@@ -11,3 +11,5 @@ Weather app maked with RN Expo.
 
 yarn install && yarn start
 || expo start
+
+![preview](../main/assets/images/2021-12-07_23h58_47.png)
