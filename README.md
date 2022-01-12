@@ -13,3 +13,4 @@ yarn install && yarn start
 || expo start
 
 ![preview](../main/assets/images/2021-12-07_23h58_47.png)
+![preview](../main/assets/images/2021-12-07_23h59_09.png)
