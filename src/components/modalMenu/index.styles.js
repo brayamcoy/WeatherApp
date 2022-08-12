@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    width: 200,
+    width: 160,
     padding: 20,
     position: 'absolute',
     overflow: 'scroll',

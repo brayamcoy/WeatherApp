@@ -61,9 +61,10 @@ export default function ModalMenu({ visible, toggleOverlay, city }) {
             on
             rounded
             icon={{ name: 'logo-github', type: 'ionicon' }}
-            containerStyle={{ backgroundColor: 'gray' }}
+            containerStyle={{ backgroundColor: '#444' }}
           />
-          <Text style={{ fontSize: 16, marginTop: 20 }}>Created by: Brayan Coy</Text>
+          <Text style={{ fontSize: 16, marginTop: 20 }}>Created by:</Text>
+          <Text style={{ fontSize: 16, fontWeight: 'bold' }}> Brayan Coy</Text>
         </View>
       </Overlay>
     </View>
